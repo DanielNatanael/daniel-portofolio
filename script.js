@@ -46,6 +46,12 @@ document.addEventListener("DOMContentLoaded", function() {
     showSlide(currentSlide);
 });
 
+function toggleMenu() {
+    const menuList = document.getElementById('menu-list');
+    menuList.classList.toggle('active'); // Toggle the 'active' class
+}
+
+
 document.getElementById('contactForm').addEventListener('submit', function(event) {
     event.preventDefault(); // Prevent form from reloading the page
 
