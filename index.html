@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Daniel Natanael Butar Butar</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js"></script> <!-- Correct file name -->
+    <!-- Include EmailJS script in the head or right before the closing body tag -->
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+<script type="text/javascript">
+   (function(){
+      emailjs.init("NbAipG7d0lcWRjaiv"); // Replace with your EmailJS User ID
+   })();
+</script>
+    
+</head>
+<body>
+    <header>
+        <div class="profile">
+            <img src="photodaniel.jpg" alt="[Daniel Natanael Butar Butar]" class="profile-img">
+            <h1>Daniel Natanael Butar Butar</h1>
+            <p>Bachelor of Computer Science</p>
+        </div>
+    </header>
+    
+
+    <nav>
+        <div class="menu-icon" onclick="toggleMenu()">
+            &#9776; <!-- This is the hamburger icon -->
+        </div>
+        <ul id="menu-list">
+            <li><a href="#about">Tentang Saya</a></li>
+            <li><a href="#education">Pendidikan</a></li>
+            <li><a href="#skills">Keahlian</a></li>
+            <li><a href="#tools">Tools</a></li>
+            <li><a href="#designs">Hasil Desain</a></li>
+            <li><a href="#awards">Penghargaan</a></li>
+            <li><a href="#experience">Pengalaman</a></li>
+            <li><a href="#contact">Kontak</a></li>
+            <li><a href="cv/CV.pdf" download target="_blank">CV</a></li> <!-- Menu Download CV -->
+        </ul>
+    </nav>
+    
+
+    <section id="about">
+        <h2>Tentang Saya</h2>
+        <p>Lulusan S1 Teknik Informatika dengan pengalaman dalam perbaikan perangkat keras dan 
+            perangkat lunak, serta pengelolaan sistem dan analisis data. Memiliki keterampilan dalam 
+            berbagai bahasa pemrograman seperti HTML, CSS, Python, dan JavaScript, serta desain grafis 
+            menggunakan Adobe Photoshop dan Illustrator. Berpengalaman dalam manajemen proyek dan 
+            pengujian perangkat lunak, serta aktif dalam kegiatan organisasi kampus. Mampu bekerja dalam 
+            lingkungan yang dinamis dan memiliki kemampuan problem-solving yang baik.</p>
+    </section>
+    <section id="education">
+        <h2>Pendidikan</h2>
+        <div class="education-timeline">
+            <!-- SD -->
+            <div class="education-item">
+                <img src="tutwuri.png" alt="SD Logo" class="education-logo">
+                <div class="education-info">
+                    <h3>SD NEGERI 09 MINAS BARAT</h3>
+                    <p>2008 - 2014</p>
+                </div>
+            </div>
+            <!-- SMP -->
+            <div class="education-item">
+                <img src="tutwuri.png" alt="SMP Logo" class="education-logo">
+                <div class="education-info">
+                    <h3>SMP Negeri 5 Minas</h3>
+                    <p>2014 - 2017</p>
+                </div>
+            </div>
+            <!-- SMA -->
+            <div class="education-item">
+                <img src="smk1kandis.png" alt="SMK Logo" class="education-logo">
+                <div class="education-info">
+                    <h3>SMK Negeri 1 Kandis</h3>
+                    <p>Teknik Komputer dan Jaringan (2017 - 2020)</p>
+                </div>
+            </div>
+            <!-- S1 -->
+            <div class="education-item">
+                <img src="unilaklogo.jpg" alt="University Logo" class="education-logo">
+                <div class="education-info">
+                    <h3>Universitas Lancang Kuning</h3>
+                    <p>S1 Teknik Informatika (2020 - 2024)</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+
+    <section id="skills">
+        <h2>Keahlian</h2>
+        <ul>
+            <li>Pemrograman: Python, Java, HTML/CSS</li>
+            <li>Teknologi Informasi: Perbaikan dan perawatan komputer, instalasi jaringan</li>
+            <li>Desain Grafis: Adobe Photoshop, Illustrator, CorelDRAW</li>
+            <li>Microsoft Office: Word, Excel, PowerPoint</li>
+            
+        </ul>
+    </section>
+    <section id="tools">
+        <h2>Tools</h2>
+        <div class="tools-icons">
+            <img src="html.png" alt="HTML" class="tool-icon">
+            <img src="css-3.png" alt="CSS" class="tool-icon">
+            <img src="js.png" alt="JavaScript" class="tool-icon">
+            <img src="mysql.png" alt="MySQL" class="tool-icon">
+            <img src="github.png" alt="Github" class="tool-icon">
+            <img src="photoshop.png" alt="Adobe Photoshop" class="tool-icon">
+            <img src="corel.png" alt="CorelDRAW" class="tool-icon">
+            <img src="premiere-pro.png" alt="Adobe premiere-pro" class="tool-icon">
+            <img src="word.png" alt="Microsoft Word" class="tool-icon">
+            <img src="excel.png" alt="Microsoft excel" class="tool-icon">
+            <img src="powerpoint.png" alt="Microsoft powerpoint" class="tool-icon">
+        </div>
+    </section>
+
+    <section id="designs">
+        <h2>Hasil Desain Grafis</h2>
+        <div class="designs-gallery">
+            <img src="logopmm.png" alt="Logo PMM UNDIPA">
+            <img src="pkkmb2022unilak.jpg" alt="Twibbon PKKMB2022">
+
+            <img src="LOGO PKKMB2022.png" alt="Logo PKKMB2022">
+        </div>
+    </section>
+
+    <section id="awards">
+        <h2>Penghargaan</h2>
+        <ul>
+            <li>Peserta Program Pertukaran Mahasiswa Merdeka</li>
+            <li>Lulus Pelatihan Itensif Laravel</li>
+            <li>Sertifikasi Kompetensi Teknisi Komputer dan Jaringan oleh Badan Nasional Sertifikasi Profesi</li>
+        </ul>
+    
+        <!-- Tambahkan gambar sertifikat di bawah ul -->
+        <div class="certificate-gallery">
+            <p><img src="sertifikatpmm.jpg" alt="Sertifikat Pertukaran Mahasiswa Merdeka "  class="certificate-horizontal">
+            <img src="sertifikatlaravel.jpg" alt="Sertifikat Pelatihan Laravel" class="certificate-horizontal">
+            <img src="bnsp1.jpg" alt="Sertifikat Kompetensi Teknisi Komputer dan Jaringan" class="certificate-vertical">
+           
+           
+        </div>
+    </section>
+    
+
+    <section id="experience">
+        <h2>Pengalaman</h2>
+        <h3>Pengalaman Internship</h3>
+        <ul>
+            <li>Teknisi Komputer di Wong 5 Komputer ( Januari 2019 - April 2019)</li>
+        </ul>
+
+        <h3>Pengalaman Organisasi</h3>
+        <ul>
+            <li>Anggota Kominfo BEM Universitas (2022 - 2023)</li>
+            <li>Panitia PKKMB Universitas Lancang Kuning 2022</li>
+            <li>BPH Program Pertukaran Mahasiswa Merdeka Batch3</li>
+        </ul>
+        <section id="moments">
+            <h2>Momen dan Pencapaian</h2>
+            <div class="slider-container">
+                <div class="slider">
+                    <div class="slide">
+                        <img src="Pmm.JPG" alt="Momen 1">
+                        <div class="caption">Pertukaran Mahasiswa Merdeka 2023</div>
+                    </div>
+                    <div class="slide">
+                        <img src="pkkmb.JPG" alt="Momen 2">
+                        <div class="caption">Panitia PKKMB Universitas Lancang Kuning 2022</div>
+                    </div>
+                    <div class="slide">
+                        <img src="PelantikanBEM.JPG" alt="Momen 3">
+                        <div class="caption">Pelantikan BEM Universitas Lancang Kuning Periode 2022/2023</div>
+                    </div>
+                
+                    <div class="slide">
+                        <img src="hmk.JPG" alt="Momen 4">
+                        <div class="caption">Panitia Natal HMK 2022</div>
+                    </div>
+                </div>
+                <button class="prev">&#10094;</button>
+                <button class="next">&#10095;</button>
+            </div>
+        </section>
+        
+        <section id="contact-form">
+            <h2>Kirim Pesan</h2>
+            <form id="contactForm">
+                <div class="form-group">
+                    <label for="name">Nama:</label>
+                    <input type="text" id="name" name="name" placeholder="Nama Anda" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" placeholder="Email Anda" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Pesan:</label>
+                    <textarea id="message" name="message" placeholder="Tulis pesan Anda" required></textarea>
+                </div>
+                <button type="submit" onclick="sendMail()">Kirim Pesan</button>
+            </form>
+            <p id="form-status"></p> <!-- Message after form submission -->
+        </section>
+                
+    
+
+   <!-- Tambahkan di bagian paling bawah dari footer -->
+<footer id="contact">
+    <h2>Kontak</h2>
+    <div class="social-icons">
+        <a href="mailto:butarnatanael@gmail.com" target="_blank">
+            <img src="mail.png" alt="Email" class="contact-icon">
+        </a>
+        <a href="https://www.linkedin.com/in/daniel-natanael-butar-butar-878882247/" target="_blank">
+            <img src="likedin.png" alt="LinkedIn" class="contact-icon">
+
+         <a href="https://github.com/DanielNatanael" target="_blank">
+                <img src="github-sign.png" alt="Github" class="contact-icon">    
+        </a>
+        <a href="https://www.instagram.com/daniel_btr2/" target="_blank">
+            <img src="instagram.png" alt="instagram" class="contact-icon">
+        </a>
+        <a href="https://www.tiktok.com/@danielnb_?_t=8otlP4m85ay&_r=1" target="_blank">
+            <img src="tiktok.png" alt="TikTok" class="contact-icon">
+        </a>
+        
+    </div>
+    <div class="copyright">
+        <p>&copy; 2024 Daniel Natanael Butar Butar. All rights reserved.</p>
+    </div>
+</footer>
+
+
+
+    <script src="scripts.js"></script>
+</body>
+</html>
