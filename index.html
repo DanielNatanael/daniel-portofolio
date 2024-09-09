@@ -193,16 +193,16 @@
             <h2>Kirim Pesan</h2>
             <form id="contactForm" onsubmit="sendMail(); return false;">
                 <div class="form-group">
-                    <label for="name">Nama:</label>
-                    <input type="text" id="name" name="name" placeholder="Nama Anda" required>
+                    <label for="name" class="forms">Nama:</label>
+                    <input type="text" id="name" name="name" placeholder="Nama Anda*" required>
                 </div>
                 <div class="form-group">
-                    <label for="email">Email:</label>
-                    <input type="email" id="email" name="email" placeholder="Email Anda" required>
+                    <label for="email" class="forms">Email:</label>
+                    <input type="email" id="email" name="email" placeholder="Email Anda*" required>
                 </div>
                 <div class="form-group">
-                    <label for="message">Pesan:</label>
-                    <textarea id="message" name="message" placeholder="Tulis pesan Anda" required></textarea>
+                    <label for="message" class="forms">Pesan:</label>
+                    <textarea id="message" name="message" placeholder="Tulis pesan Anda*" required></textarea>
                 </div>
                 <button type="submit" onclick="sendMail()">Kirim Pesan</button>
             </form>

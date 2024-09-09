@@ -540,6 +540,7 @@ button {
 
 .form-group {
     margin-bottom: 15px;
+    text-align: left;
 }
 
 input[type="text"],
@@ -625,4 +626,7 @@ button[type="submit"]:hover {
 }
 #experience h2 {
     text-align: center;
+}
+.forms {
+    text-align: left;
 }
