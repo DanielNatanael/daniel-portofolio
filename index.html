@@ -7,20 +7,21 @@
     <link rel="stylesheet" href="styles.css">
     <script src="script.js"></script> <!-- Correct file name -->
     <!-- Include EmailJS script in the head or right before the closing body tag -->
-<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
-<script type="text/javascript">
-   (function(){
-      emailjs.init("NbAipG7d0lcWRjaiv"); // Replace with your EmailJS User ID
-   })();
-</script>
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        emailjs.init("NbAipG7d0lcWRjaiv"); // Public key for EmailJS
+      });
+    </script>
+    
     
 </head>
 <body>
     <header>
         <div class="profile">
-            <img src="photodaniel.jpg" alt="[Daniel Natanael Butar Butar]" class="profile-img">
-            <h1>Daniel Natanael Butar Butar</h1>
-            <p>Bachelor of Computer Science</p>
+            <img src="photodaniel.jpg" alt="[Daniel Natanael Butar Butar]" class="profile-img" id="animasi">
+            <h1 class="fade-in">Daniel Natanael Butar Butar</h1>
+            <p class="fade-in">Bachelor of Computer Science</p>
         </div>
     </header>
     
@@ -43,7 +44,7 @@
     </nav>
     
 
-    <section id="about">
+    <section id="about" class="fade-in"> <!-- Added animation class -->
         <h2>Tentang Saya</h2>
         <p>Lulusan S1 Teknik Informatika dengan pengalaman dalam perbaikan perangkat keras dan 
             perangkat lunak, serta pengelolaan sistem dan analisis data. Memiliki keterampilan dalam 
@@ -52,7 +53,7 @@
             pengujian perangkat lunak, serta aktif dalam kegiatan organisasi kampus. Mampu bekerja dalam 
             lingkungan yang dinamis dan memiliki kemampuan problem-solving yang baik.</p>
     </section>
-    <section id="education">
+    <section id="education" class="fade-in">
         <h2>Pendidikan</h2>
         <div class="education-timeline">
             <!-- SD -->
@@ -91,7 +92,7 @@
     </section>
     
 
-    <section id="skills">
+    <section id="skills" class="fade-in">
         <h2>Keahlian</h2>
         <ul>
             <li>Pemrograman: Python, Java, HTML/CSS</li>
@@ -101,7 +102,7 @@
             
         </ul>
     </section>
-    <section id="tools">
+    <section id="tools" class="fade-in">
         <h2>Tools</h2>
         <div class="tools-icons">
             <img src="html.png" alt="HTML" class="tool-icon">
@@ -118,17 +119,18 @@
         </div>
     </section>
 
-    <section id="designs">
-        <h2>Hasil Desain Grafis</h2>
+    <section id="designs" class="fade-in">
+        <h2>Hasil Desain</h2>
         <div class="designs-gallery">
-            <img src="logopmm.png" alt="Logo PMM UNDIPA">
+            <img src="logopmm.png" alt="Logo PMM UNDIPA" loading="lazy">
+
             <img src="pkkmb2022unilak.jpg" alt="Twibbon PKKMB2022">
 
             <img src="LOGO PKKMB2022.png" alt="Logo PKKMB2022">
         </div>
     </section>
 
-    <section id="awards">
+    <section id="awards" class="fade-in">
         <h2>Penghargaan</h2>
         <ul>
             <li>Peserta Program Pertukaran Mahasiswa Merdeka</li>
@@ -147,7 +149,7 @@
     </section>
     
 
-    <section id="experience">
+    <section id="experience" class="fade-in">
         <h2>Pengalaman</h2>
         <h3>Pengalaman Internship</h3>
         <ul>
@@ -160,8 +162,8 @@
             <li>Panitia PKKMB Universitas Lancang Kuning 2022</li>
             <li>BPH Program Pertukaran Mahasiswa Merdeka Batch3</li>
         </ul>
-        <section id="moments">
-            <h2>Momen dan Pencapaian</h2>
+        <section id="moments" class="fade-in">
+            <h3>Momen dan Pencapaian</h3>
             <div class="slider-container">
                 <div class="slider">
                     <div class="slide">
@@ -187,9 +189,9 @@
             </div>
         </section>
         
-        <section id="contact-form">
+        <section id="contact-form" class="fade-in">
             <h2>Kirim Pesan</h2>
-            <form id="contactForm">
+            <form id="contactForm" onsubmit="sendMail(); return false;">
                 <div class="form-group">
                     <label for="name">Nama:</label>
                     <input type="text" id="name" name="name" placeholder="Nama Anda" required>
@@ -210,7 +212,7 @@
     
 
    <!-- Tambahkan di bagian paling bawah dari footer -->
-<footer id="contact">
+<footer id="contact" class="fade-in">
     <h2>Kontak</h2>
     <div class="social-icons">
         <a href="mailto:butarnatanael@gmail.com" target="_blank">

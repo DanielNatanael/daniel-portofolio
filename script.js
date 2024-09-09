@@ -51,27 +51,73 @@ function toggleMenu() {
     menuList.classList.toggle('active'); // Toggle the 'active' class
 }
 
+document.addEventListener("DOMContentLoaded", function() {
+    emailjs.init("NbAipG7d0lcWRjaiv"); // Initialize EmailJS with your public key
 
-document.getElementById('contactForm').addEventListener('submit', function(event) {
-    event.preventDefault(); // Prevent form from reloading the page
+    document.getElementById('contactForm').addEventListener('submit', function(event) {
+        event.preventDefault(); // Prevent form from reloading the page
 
-    // Get form values
-    const name = document.getElementById('name').value;
-    const email = document.getElementById('email').value;
-    const message = document.getElementById('message').value;
+        // Get form values
+        const name = document.getElementById('name').value;
+        const email = document.getElementById('email').value;
+        const message = document.getElementById('message').value;
 
-    // Send email using EmailJS
-    emailjs.send("service_bkpo6fj", "template_f17kg3n", {
-        from_name: name,
-        from_email: email,
-        message: message
-    })
-    .then(function(response) {
-        console.log("SUCCESS!", response.status, response.text);
-        document.getElementById('form-status').innerText = "Pesan Anda berhasil dikirim!";
-        document.getElementById('contactForm').reset(); // Clear the form after success
-    }, function(error) {
-        console.log("FAILED...", error);
-        document.getElementById('form-status').innerText = "Terjadi kesalahan, silakan coba lagi.";
+        // Send email using EmailJS
+        emailjs.send("service_bkpo6fj", "template_f17kg3n", {
+            from_name: name,
+            from_email: email,
+            message: message
+        })
+        .then(function(response) {
+            console.log("SUCCESS!", response.status, response.text);
+            document.getElementById('form-status').innerText = "Pesan Anda berhasil dikirim!";
+            document.getElementById('contactForm').reset(); // Clear the form after success
+        }, function(error) {
+            console.log("FAILED...", error);
+            document.getElementById('form-status').innerText = "Terjadi kesalahan, silakan coba lagi.";
+        });
     });
+});
+
+
+document.addEventListener("DOMContentLoaded", function() {
+    let elements = document.querySelectorAll('.fade-in');
+    
+    function checkVisibility() {
+        elements.forEach(element => {
+            const rect = element.getBoundingClientRect();
+            if (rect.top < window.innerHeight && rect.bottom >= 0) {
+                element.classList.add('visible');
+            } else {
+                element.classList.remove('visible');
+            }
+        });
+    }
+
+    window.addEventListener('scroll', checkVisibility);
+    checkVisibility(); // Check visibility on page load
+
+    // Existing functionality here (sliders, menu toggle, etc.)
+    // Auto-slide and EmailJS setup
+});
+
+document.addEventListener("DOMContentLoaded", function() {
+    let elements = document.querySelectorAll('.profile-img');
+    
+    function checkVisibility() {
+        elements.forEach(element => {
+            const rect = element.getBoundingClientRect();
+            if (rect.top < window.innerHeight && rect.bottom >= 0) {
+                element.classList.add('visible');
+            } else {
+                element.classList.remove('visible');
+            }
+        });
+    }
+
+    window.addEventListener('scroll', checkVisibility);
+    checkVisibility(); // Check visibility on page load
+
+    // Existing functionality here (sliders, menu toggle, etc.)
+    // Auto-slide and EmailJS setup
 });

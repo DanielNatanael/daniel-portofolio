@@ -1,13 +1,12 @@
 /* Global Styles */
 body {
-    font-family: 'Poppins', sans-serif; /* Menggunakan font modern */
+    font-family: 'Poppins', sans-serif;
     margin: 0;
     padding: 0;
     background-color: #f0f0f0;
     color: #333;
     line-height: 1.6;
 }
-
 /* Header Styling */
 header {
     text-align: center;
@@ -43,6 +42,7 @@ header .profile {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Menambahkan efek bayangan */
 }
 
+
 .profile-h1 {
     font-size: 36px; /* Ukuran default untuk layar besar */
 }
@@ -70,11 +70,17 @@ p {
 #about p {
     text-align: justify;  /* Membuat teks rata kiri dan kanan */
 }
+#about {
+    text-align: center;
+}
 /* Navigation Bar */
 nav {
     background-color: #015c6e;
     color: white;
     padding: 10px 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
 }
 
 nav ul {
@@ -111,12 +117,19 @@ section {
     max-width: 800px;
     background-color: white;
     border-radius: 12px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Bayangan lebih lembut */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease-in-out;
 }
 
 section:hover {
-    transform: translateY(-5px); /* Efek hover pada section */
+    transform: translateY(-5px);
+}
+
+@media only screen and (max-width: 768px) {
+    section {
+        margin: 10px;
+        padding: 15px;
+    }
 }
 
 /* Gallery */
@@ -137,7 +150,9 @@ section:hover {
 .designs-gallery img:hover {
     transform: scale(1.05); /* Zoom-in saat hover */
 }
-
+#designs h2 {
+    text-align: center;
+}
 /* Tools Section */
 .tools-icons {
     display: flex;
@@ -244,6 +259,9 @@ footer .contact-icon:hover {
         height: 30px;
     }
 }
+#tools h2 {
+    text-align: center;
+}
 /* Sertifikat Gallery */
 .certificate-gallery {
     display: flex;
@@ -289,6 +307,12 @@ footer .contact-icon:hover {
 @media only screen and (max-width: 480px) {
     .certificate-horizontal, .certificate-vertical {
         width: 100%;
+    }
+    nav {
+        background-color: #015c6e;
+        color: white;
+        padding: 10px 0;
+     
     }
 }
 
@@ -342,6 +366,12 @@ button {
     button {
         padding: 5px;
     }
+    nav {
+        background-color: #015c6e;
+        color: white;
+        padding: 10px 0;
+       
+    }
 }
 .caption {
     text-align: center;
@@ -365,15 +395,30 @@ button {
     height: auto;
 }
 
-/* Menu Icon (Hamburger) Styling */
 .menu-icon {
     display: none;
     font-size: 30px;
     cursor: pointer;
-    color: white;
-    
-    margin-left: 15px;
 }
+
+@media only screen and (max-width: 768px) {
+    nav ul {
+        display: none;
+        flex-direction: column;
+    }
+
+    .menu-icon {
+        display: block;
+        color: white;
+        margin-left: 15px;
+        
+    }
+
+    nav.active ul {
+        display: flex;
+    }
+}
+
 
 /* Hide the menu-list on small screens */
 #menu-list {
@@ -491,15 +536,19 @@ button {
     font-size: 2rem;
 }
 
+
+
 .form-group {
     margin-bottom: 15px;
 }
 
-.form-group label {
-    display: block;
-    margin-bottom: 5px;
-    font-size: 1rem;
-    color: #333;
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
 }
 
 .form-group input, .form-group textarea {
@@ -544,4 +593,36 @@ button[type="submit"]:hover {
     margin-top: 15px;
     font-size: 1rem;
     color: #017687;
+}
+#moments h3{
+    text-align: center;
+}
+
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 1s ease-out, transform 1s ease-out;
+}
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+#animasi {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 1s ease-out, transform 1s ease-out;
+}
+#animasi.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+#skills h2 {
+    text-align: center;
+}
+#awards h2 {
+    text-align: center;
+}
+#experience h2 {
+    text-align: center;
 }
